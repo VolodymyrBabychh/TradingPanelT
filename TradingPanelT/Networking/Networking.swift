@@ -67,8 +67,7 @@ final class CandleViewModel: ObservableObject {
             }, receiveValue: {[weak self] data in
                 for obj in data {
                     let time = Date(timeIntervalSince1970: TimeInterval(obj.time))
-                    let volume = Double(obj.volume)
-                    guard let lowF = Double(obj.lowF), let highF = Double(obj.highF), let openF = Double(obj.openF), let closeF = Double(obj.closeF) else {return}
+                    guard let lowF = Double(obj.lowF), let highF = Double(obj.highF), let openF = Double(obj.openF), let closeF = Double(obj.closeF), let volume = Double(obj.volumeF) else {return}
                     self?.data.append(SimplefiedData(lowF: lowF, highF: highF, time: time, openF: openF, closeF: closeF, volume: volume))
                 }
             })

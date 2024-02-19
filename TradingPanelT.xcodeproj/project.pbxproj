@@ -8,17 +8,77 @@
 
 /* Begin PBXBuildFile section */
 		C60EF2892B836F3F00414FF9 /* TradingPanelTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2882B836F3F00414FF9 /* TradingPanelTApp.swift */; };
-		C60EF28B2B836F3F00414FF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF28A2B836F3F00414FF9 /* ContentView.swift */; };
 		C60EF28D2B836F4000414FF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60EF28C2B836F4000414FF9 /* Assets.xcassets */; };
 		C60EF2902B836F4000414FF9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60EF28F2B836F4000414FF9 /* Preview Assets.xcassets */; };
+		C60EF2972B836FB700414FF9 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2962B836FB700414FF9 /* Networking.swift */; };
+		C60EF2992B836FDE00414FF9 /* NetworkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2982B836FDE00414FF9 /* NetworkingModel.swift */; };
+		C60EF29C2B83701700414FF9 /* TickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF29B2B83701700414FF9 /* TickerViewModel.swift */; };
+		C60EF29E2B83702D00414FF9 /* OrderBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF29D2B83702D00414FF9 /* OrderBookViewModel.swift */; };
+		C60EF2A12B83706800414FF9 /* CandleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2A02B83706800414FF9 /* CandleModel.swift */; };
+		C60EF2A42B83707700414FF9 /* BuyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2A22B83707700414FF9 /* BuyModel.swift */; };
+		C60EF2A52B83707700414FF9 /* TickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2A32B83707700414FF9 /* TickerModel.swift */; };
+		C60EF2C02B83712900414FF9 /* Row24hhighCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2A92B83712900414FF9 /* Row24hhighCell.swift */; };
+		C60EF2C12B83712900414FF9 /* ColumnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2AA2B83712900414FF9 /* ColumnCell.swift */; };
+		C60EF2C22B83712900414FF9 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2AB2B83712900414FF9 /* RoundedCorners.swift */; };
+		C60EF2C32B83712900414FF9 /* CandlesBottomPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2AD2B83712900414FF9 /* CandlesBottomPanel.swift */; };
+		C60EF2C42B83712900414FF9 /* CandleChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2AE2B83712900414FF9 /* CandleChartsView.swift */; };
+		C60EF2C52B83712900414FF9 /* CandlesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2AF2B83712900414FF9 /* CandlesHeaderView.swift */; };
+		C60EF2C62B83712900414FF9 /* CandlesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2B02B83712900414FF9 /* CandlesItemView.swift */; };
+		C60EF2C72B83712900414FF9 /* CanldesItemMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2B12B83712900414FF9 /* CanldesItemMenuView.swift */; };
+		C60EF2C82B83712900414FF9 /* CandlesTopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2B22B83712900414FF9 /* CandlesTopDetailView.swift */; };
+		C60EF2C92B83712900414FF9 /* CandlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2B32B83712900414FF9 /* CandlesView.swift */; };
+		C60EF2CA2B83712900414FF9 /* CandlesTopMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2B42B83712900414FF9 /* CandlesTopMenuView.swift */; };
+		C60EF2CB2B83712900414FF9 /* BuyItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2B72B83712900414FF9 /* BuyItemsView.swift */; };
+		C60EF2CC2B83712900414FF9 /* BuyItemsRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2B82B83712900414FF9 /* BuyItemsRight.swift */; };
+		C60EF2CD2B83712900414FF9 /* BuyItemsLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2B92B83712900414FF9 /* BuyItemsLeft.swift */; };
+		C60EF2CE2B83712900414FF9 /* OrderItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2BA2B83712900414FF9 /* OrderItemsView.swift */; };
+		C60EF2CF2B83712900414FF9 /* OrderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2BB2B83712900414FF9 /* OrderBarView.swift */; };
+		C60EF2D02B83712900414FF9 /* TopMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2BC2B83712900414FF9 /* TopMenuView.swift */; };
+		C60EF2D12B83712900414FF9 /* TopPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2BD2B83712900414FF9 /* TopPanelView.swift */; };
+		C60EF2D22B83712900414FF9 /* TradingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2BE2B83712900414FF9 /* TradingView.swift */; };
+		C60EF2D32B83712900414FF9 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2BF2B83712900414FF9 /* LoadingView.swift */; };
+		C60EF2D92B83713100414FF9 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2D52B83713100414FF9 /* StringConstants.swift */; };
+		C60EF2DA2B83713100414FF9 /* ColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2D62B83713100414FF9 /* ColorConstant.swift */; };
+		C60EF2DB2B83713100414FF9 /* FontScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2D72B83713100414FF9 /* FontScheme.swift */; };
+		C60EF2DC2B83713100414FF9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EF2D82B83713100414FF9 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C60EF2852B836F3F00414FF9 /* TradingPanelT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradingPanelT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60EF2882B836F3F00414FF9 /* TradingPanelTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingPanelTApp.swift; sourceTree = "<group>"; };
-		C60EF28A2B836F3F00414FF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C60EF28C2B836F4000414FF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C60EF28F2B836F4000414FF9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C60EF2962B836FB700414FF9 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		C60EF2982B836FDE00414FF9 /* NetworkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingModel.swift; sourceTree = "<group>"; };
+		C60EF29B2B83701700414FF9 /* TickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerViewModel.swift; sourceTree = "<group>"; };
+		C60EF29D2B83702D00414FF9 /* OrderBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookViewModel.swift; sourceTree = "<group>"; };
+		C60EF2A02B83706800414FF9 /* CandleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandleModel.swift; sourceTree = "<group>"; };
+		C60EF2A22B83707700414FF9 /* BuyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyModel.swift; sourceTree = "<group>"; };
+		C60EF2A32B83707700414FF9 /* TickerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerModel.swift; sourceTree = "<group>"; };
+		C60EF2A92B83712900414FF9 /* Row24hhighCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row24hhighCell.swift; sourceTree = "<group>"; };
+		C60EF2AA2B83712900414FF9 /* ColumnCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnCell.swift; sourceTree = "<group>"; };
+		C60EF2AB2B83712900414FF9 /* RoundedCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		C60EF2AD2B83712900414FF9 /* CandlesBottomPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandlesBottomPanel.swift; sourceTree = "<group>"; };
+		C60EF2AE2B83712900414FF9 /* CandleChartsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandleChartsView.swift; sourceTree = "<group>"; };
+		C60EF2AF2B83712900414FF9 /* CandlesHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandlesHeaderView.swift; sourceTree = "<group>"; };
+		C60EF2B02B83712900414FF9 /* CandlesItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandlesItemView.swift; sourceTree = "<group>"; };
+		C60EF2B12B83712900414FF9 /* CanldesItemMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanldesItemMenuView.swift; sourceTree = "<group>"; };
+		C60EF2B22B83712900414FF9 /* CandlesTopDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandlesTopDetailView.swift; sourceTree = "<group>"; };
+		C60EF2B32B83712900414FF9 /* CandlesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandlesView.swift; sourceTree = "<group>"; };
+		C60EF2B42B83712900414FF9 /* CandlesTopMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandlesTopMenuView.swift; sourceTree = "<group>"; };
+		C60EF2B72B83712900414FF9 /* BuyItemsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyItemsView.swift; sourceTree = "<group>"; };
+		C60EF2B82B83712900414FF9 /* BuyItemsRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyItemsRight.swift; sourceTree = "<group>"; };
+		C60EF2B92B83712900414FF9 /* BuyItemsLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyItemsLeft.swift; sourceTree = "<group>"; };
+		C60EF2BA2B83712900414FF9 /* OrderItemsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItemsView.swift; sourceTree = "<group>"; };
+		C60EF2BB2B83712900414FF9 /* OrderBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderBarView.swift; sourceTree = "<group>"; };
+		C60EF2BC2B83712900414FF9 /* TopMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopMenuView.swift; sourceTree = "<group>"; };
+		C60EF2BD2B83712900414FF9 /* TopPanelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPanelView.swift; sourceTree = "<group>"; };
+		C60EF2BE2B83712900414FF9 /* TradingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradingView.swift; sourceTree = "<group>"; };
+		C60EF2BF2B83712900414FF9 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		C60EF2D52B83713100414FF9 /* StringConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		C60EF2D62B83713100414FF9 /* ColorConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorConstant.swift; sourceTree = "<group>"; };
+		C60EF2D72B83713100414FF9 /* FontScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontScheme.swift; sourceTree = "<group>"; };
+		C60EF2D82B83713100414FF9 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +112,11 @@
 			isa = PBXGroup;
 			children = (
 				C60EF2882B836F3F00414FF9 /* TradingPanelTApp.swift */,
-				C60EF28A2B836F3F00414FF9 /* ContentView.swift */,
+				C60EF2D42B83713100414FF9 /* Additional */,
+				C60EF2A62B83708B00414FF9 /* Models */,
+				C60EF29A2B836FEE00414FF9 /* Networking */,
+				C60EF29F2B83704100414FF9 /* ViewModel */,
+				C60EF2A72B83712900414FF9 /* Views */,
 				C60EF28C2B836F4000414FF9 /* Assets.xcassets */,
 				C60EF28E2B836F4000414FF9 /* Preview Content */,
 			);
@@ -65,6 +129,104 @@
 				C60EF28F2B836F4000414FF9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C60EF29A2B836FEE00414FF9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C60EF2962B836FB700414FF9 /* Networking.swift */,
+				C60EF2982B836FDE00414FF9 /* NetworkingModel.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C60EF29F2B83704100414FF9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C60EF29B2B83701700414FF9 /* TickerViewModel.swift */,
+				C60EF29D2B83702D00414FF9 /* OrderBookViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C60EF2A62B83708B00414FF9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C60EF2A22B83707700414FF9 /* BuyModel.swift */,
+				C60EF2A02B83706800414FF9 /* CandleModel.swift */,
+				C60EF2A32B83707700414FF9 /* TickerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C60EF2A72B83712900414FF9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C60EF2A82B83712900414FF9 /* Additions */,
+				C60EF2AC2B83712900414FF9 /* ChartsView */,
+				C60EF2B52B83712900414FF9 /* TradingView */,
+				C60EF2BF2B83712900414FF9 /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C60EF2A82B83712900414FF9 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				C60EF2A92B83712900414FF9 /* Row24hhighCell.swift */,
+				C60EF2AA2B83712900414FF9 /* ColumnCell.swift */,
+				C60EF2AB2B83712900414FF9 /* RoundedCorners.swift */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		C60EF2AC2B83712900414FF9 /* ChartsView */ = {
+			isa = PBXGroup;
+			children = (
+				C60EF2AD2B83712900414FF9 /* CandlesBottomPanel.swift */,
+				C60EF2AE2B83712900414FF9 /* CandleChartsView.swift */,
+				C60EF2AF2B83712900414FF9 /* CandlesHeaderView.swift */,
+				C60EF2B02B83712900414FF9 /* CandlesItemView.swift */,
+				C60EF2B12B83712900414FF9 /* CanldesItemMenuView.swift */,
+				C60EF2B22B83712900414FF9 /* CandlesTopDetailView.swift */,
+				C60EF2B32B83712900414FF9 /* CandlesView.swift */,
+				C60EF2B42B83712900414FF9 /* CandlesTopMenuView.swift */,
+			);
+			path = ChartsView;
+			sourceTree = "<group>";
+		};
+		C60EF2B52B83712900414FF9 /* TradingView */ = {
+			isa = PBXGroup;
+			children = (
+				C60EF2B62B83712900414FF9 /* BuyItemsView */,
+				C60EF2BA2B83712900414FF9 /* OrderItemsView.swift */,
+				C60EF2BB2B83712900414FF9 /* OrderBarView.swift */,
+				C60EF2BC2B83712900414FF9 /* TopMenuView.swift */,
+				C60EF2BD2B83712900414FF9 /* TopPanelView.swift */,
+				C60EF2BE2B83712900414FF9 /* TradingView.swift */,
+			);
+			path = TradingView;
+			sourceTree = "<group>";
+		};
+		C60EF2B62B83712900414FF9 /* BuyItemsView */ = {
+			isa = PBXGroup;
+			children = (
+				C60EF2B72B83712900414FF9 /* BuyItemsView.swift */,
+				C60EF2B82B83712900414FF9 /* BuyItemsRight.swift */,
+				C60EF2B92B83712900414FF9 /* BuyItemsLeft.swift */,
+			);
+			path = BuyItemsView;
+			sourceTree = "<group>";
+		};
+		C60EF2D42B83713100414FF9 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				C60EF2D52B83713100414FF9 /* StringConstants.swift */,
+				C60EF2D62B83713100414FF9 /* ColorConstant.swift */,
+				C60EF2D72B83713100414FF9 /* FontScheme.swift */,
+				C60EF2D82B83713100414FF9 /* Utils.swift */,
+			);
+			path = Additional;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +299,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C60EF28B2B836F3F00414FF9 /* ContentView.swift in Sources */,
+				C60EF2CE2B83712900414FF9 /* OrderItemsView.swift in Sources */,
+				C60EF2CF2B83712900414FF9 /* OrderBarView.swift in Sources */,
+				C60EF2D92B83713100414FF9 /* StringConstants.swift in Sources */,
+				C60EF2DB2B83713100414FF9 /* FontScheme.swift in Sources */,
+				C60EF2CD2B83712900414FF9 /* BuyItemsLeft.swift in Sources */,
+				C60EF2D02B83712900414FF9 /* TopMenuView.swift in Sources */,
+				C60EF2C22B83712900414FF9 /* RoundedCorners.swift in Sources */,
+				C60EF2D32B83712900414FF9 /* LoadingView.swift in Sources */,
+				C60EF2C92B83712900414FF9 /* CandlesView.swift in Sources */,
+				C60EF2CA2B83712900414FF9 /* CandlesTopMenuView.swift in Sources */,
+				C60EF2A12B83706800414FF9 /* CandleModel.swift in Sources */,
+				C60EF2972B836FB700414FF9 /* Networking.swift in Sources */,
+				C60EF2992B836FDE00414FF9 /* NetworkingModel.swift in Sources */,
+				C60EF2C62B83712900414FF9 /* CandlesItemView.swift in Sources */,
+				C60EF2D12B83712900414FF9 /* TopPanelView.swift in Sources */,
+				C60EF2C12B83712900414FF9 /* ColumnCell.swift in Sources */,
+				C60EF29C2B83701700414FF9 /* TickerViewModel.swift in Sources */,
+				C60EF2C82B83712900414FF9 /* CandlesTopDetailView.swift in Sources */,
+				C60EF2CB2B83712900414FF9 /* BuyItemsView.swift in Sources */,
+				C60EF2C32B83712900414FF9 /* CandlesBottomPanel.swift in Sources */,
 				C60EF2892B836F3F00414FF9 /* TradingPanelTApp.swift in Sources */,
+				C60EF2C42B83712900414FF9 /* CandleChartsView.swift in Sources */,
+				C60EF2A42B83707700414FF9 /* BuyModel.swift in Sources */,
+				C60EF2DC2B83713100414FF9 /* Utils.swift in Sources */,
+				C60EF2CC2B83712900414FF9 /* BuyItemsRight.swift in Sources */,
+				C60EF2C52B83712900414FF9 /* CandlesHeaderView.swift in Sources */,
+				C60EF2C02B83712900414FF9 /* Row24hhighCell.swift in Sources */,
+				C60EF2C72B83712900414FF9 /* CanldesItemMenuView.swift in Sources */,
+				C60EF29E2B83702D00414FF9 /* OrderBookViewModel.swift in Sources */,
+				C60EF2D22B83712900414FF9 /* TradingView.swift in Sources */,
+				C60EF2A52B83707700414FF9 /* TickerModel.swift in Sources */,
+				C60EF2DA2B83713100414FF9 /* ColorConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

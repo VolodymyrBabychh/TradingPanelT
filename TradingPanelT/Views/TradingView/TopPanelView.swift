@@ -113,7 +113,3 @@ struct TopPanelView: View {
         .background(ColorConstants.Gray900)
     }
 }
-
-#Preview {
-    TopPanelView()
-}

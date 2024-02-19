@@ -165,12 +165,12 @@ struct CandleChartsView: View {
 //                        .foregroundStyle(getColor(openF: candle.openF, closeF: candle.closeF).opacity(0.5))
 //                    }
 //                }
-//                .frame(height: 400) // Adjust based on your UI needs
+//                .frame(height: 400)
 //                .chartScrollableAxes([.horizontal])
 //                .chartXScale(range: self.getRange(), type: .linear)
 //                .chartScrollPosition(x: $scrollPosition)
 //            }
-//            .background(ColorConstants.Gray901) // Assuming this is a defined color
+//            .background(ColorConstants.Gray901)
 //            .cornerRadius(12)
 //            .padding([.top, .horizontal])
             //MARK: SEPARATLY CHART (But scroll laging)
@@ -233,9 +233,7 @@ struct CandleChartsView: View {
         }
     }
     private func normalizeVolume(_ volume: Double) -> Double {
-        // Implement normalization logic here
-        // For example, scale down the volume to fit the chart's visual context
-        return volume / 10000000000 // Example scaling factor, adjust based on your data range
+        return volume / 10000000000
     }
     private func getRange() -> ClosedRange<CGFloat> {
         if spacingBetweenElements < 1 {

@@ -9,11 +9,6 @@ import SwiftUI
 
 struct BuyItemsLeft: View {
     @EnvironmentObject private var ticker: TickerViewModel
-//    @StateObject private var orderBook: OrderBookViewModel
-//
-//    init(pairId: String) {
-//        //_orderBook = StateObject(wrappedValue: OrderBookViewModel(pairId: pairId))
-//    }
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Spacer()

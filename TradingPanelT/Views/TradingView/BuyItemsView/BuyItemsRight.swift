@@ -51,7 +51,6 @@ struct BuyItemsRight: View {
                 }
             }
             .frame(width: getRelativeWidth(140.0), alignment: .leading)
-            //.padding(.top, getRelativeHeight(8.0))
             Text(StringConstants.kLbl4289799)
                 .font(FontScheme
                     .kMontserratSemiBold(size: getRelativeHeight(15.0)))
@@ -83,7 +82,6 @@ struct BuyItemsRight: View {
             }
             .frame(width: getRelativeWidth(140.0),
                    height: getRelativeHeight(119.0), alignment: .leading)
-            //.padding(.top, getRelativeHeight(11.0))
             HStack {
                 HStack {
                     Text(StringConstants.kLbl01)

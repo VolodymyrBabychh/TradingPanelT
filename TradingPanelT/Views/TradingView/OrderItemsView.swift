@@ -33,7 +33,6 @@ struct OrderItemsView:View {
                    alignment: .center)
             .padding(.top, getRelativeHeight(11.0))
             .padding(.horizontal, getRelativeWidth(16.0))
-            //limit cell progress
             HStack {
                 Text(StringConstants.kLblLimitSell)
                     .font(FontScheme.kMontserratSemiBold(size: getRelativeHeight(12.0)))
@@ -73,7 +72,6 @@ struct OrderItemsView:View {
             .frame(width: getRelativeWidth(344.0), height: getRelativeHeight(18.0),
                    alignment: .center)
             .padding(.horizontal, getRelativeWidth(16.0))
-            //order data
             HStack {
                 VStack(alignment: .leading, spacing: 0) {
                     HStack {

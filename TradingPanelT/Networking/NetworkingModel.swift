@@ -24,7 +24,6 @@ class NetworkingModel<M: Decodable>: ObservableObject, NetworkingModelType {
     init() {}
     
     func fetchData() {
-        print("fetchDATA: \(url)")
         cancellable = URLSession.shared.dataTaskPublisher(for: url)
             .map({ $0.data })
             .decode(type: M.self, decoder: JSONDecoder())

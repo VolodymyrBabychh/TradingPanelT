@@ -11,7 +11,7 @@ import Charts
 struct CandleChartsView: View {
     @EnvironmentObject private var ticker: TickerViewModel
     @StateObject var viewModel = CandleViewModel()
-    @State private var spacingBetweenElements = 15
+    @State private var spacingBetweenElements = 60
     @State private var scrollPosition: Double = 654560943.2866696
     private func getColor(openF: Double, closeF: Double) -> Color {
         let openValue = openF
@@ -142,90 +142,121 @@ struct CandleChartsView: View {
 //                )
             }
             //MARK: EXAMPLE OF COMBINED CHART
-//            VStack {
-//                Chart {
-//                    ForEach(viewModel.data, id: \.id) { candle in
-//                        RectangleMark(x: .value("Day", candle.time),
-//                                      yStart: .value("Low price", candle.lowF),
-//                                      yEnd: .value("High price", candle.highF),
-//                                      width: 2)
-//                        .opacity(0.4)
-//                        .foregroundStyle(getColor(openF: candle.openF, closeF: candle.closeF))
-//                        
-//                        RectangleMark(x: .value("Day", candle.time),
-//                                      yStart: .value("Open price", candle.openF),
-//                                      yEnd: .value("Close price", candle.closeF),
-//                                      width: 12)
-//                        .foregroundStyle(getColor(openF: candle.openF, closeF: candle.closeF))
-//                        
-//                        
-//                        BarMark(x: .value("Day", candle.time),
-//                                y: .value("Volume", normalizeVolume(candle.volume)),
-//                                width: 6)
-//                        .foregroundStyle(getColor(openF: candle.openF, closeF: candle.closeF).opacity(0.5))
-//                    }
-//                }
-//                .frame(height: 400)
-//                .chartScrollableAxes([.horizontal])
-//                .chartXScale(range: self.getRange(), type: .linear)
-//                .chartScrollPosition(x: $scrollPosition)
-//            }
-//            .background(ColorConstants.Gray901)
-//            .cornerRadius(12)
-//            .padding([.top, .horizontal])
-            //MARK: SEPARATLY CHART (But scroll laging)
             VStack {
-                Chart {
-                    ForEach(viewModel.data, id: \.id) { candle in
+                Chart(viewModel.data) { candle in
                         RectangleMark(x: .value("Day", candle.time),
                                       yStart: .value("Low price", candle.lowF),
                                       yEnd: .value("High price", candle.highF),
-                                      width: 2)
+                                      width: 4)
                         .opacity(0.4)
                         .foregroundStyle(getColor(openF: candle.openF, closeF: candle.closeF))
                         
                         RectangleMark(x: .value("Day", candle.time),
                                       yStart: .value("Open price", candle.openF),
                                       yEnd: .value("Close price", candle.closeF),
-                                      width: 12)
+                                      width: 48)
                         .foregroundStyle(getColor(openF: candle.openF, closeF: candle.closeF))
+                        .annotation {
+                            Text(String(format: "%.2f", candle.highF))
+                                .font(.caption2)
+                                .foregroundStyle(ColorConstants.Gray100)
+                        }
+                        
+                        
+                        RectangleMark(x: .value("Day", candle.time),
+                                      yStart: .value("StartPoint", 0),
+                                      yEnd: .value("Population", candle.volume / 100),
+                                      width: 48)
+                        .foregroundStyle(getColor(openF: candle.openF, closeF: candle.closeF))
+                        .annotation {
+                            Text(String(format: "%.2f", candle.volume))
+                                .font(.caption2)
+                                .foregroundStyle(ColorConstants.Gray100)
+                        }
+                }
+                .frame(height: 400)
+                .chartScrollableAxes([.horizontal])
+                .chartXScale(range: self.getRange())
+                .chartXAxis {
+                    AxisMarks(values: .stride(by: .day)) { _ in
+                        AxisValueLabel(format: .dateTime.month(.abbreviated).year())
                     }
                 }
-                .frame(height: 280)
-                .frame(width: 360)
-                .chartScrollableAxes([.horizontal])
-                .chartXScale(range: self.getRange(), type: .log)
-                .chartScrollPosition(x: $scrollPosition)
+                
             }
-            .frame(width: getRelativeWidth(361.0),
-                   height: getRelativeHeight(313.0), alignment: .center)
-            .background(RoundedCorners(topLeft: 12.0, topRight: 12.0,
-                                       bottomLeft: 12.0, bottomRight: 12.0)
-                .fill(ColorConstants.Gray901))
-            .padding(.top, getRelativeHeight(10.0))
-            .padding(.horizontal, getRelativeWidth(16.0))
-            HStack {
-                Chart {
-                    ForEach(viewModel.data, id: \.id) { candle in
-                        BarMark(x: .value("Day", candle.time),
-                                y: .value("Population", candle.volume), width: 12)
-                        .foregroundStyle(getColor(openF: candle.openF, closeF: candle.closeF))
-                    }
-                }
-                .padding()
-                .frame(height: 120)
-                .frame(width: 390)
-                .chartScrollableAxes([.horizontal])
-                .chartXScale(range: self.getRange(), type: .log)
-                .chartScrollPosition(x: $scrollPosition)
-            }
-            .frame(width: getRelativeWidth(361.0),
-                   height: getRelativeHeight(116.0), alignment: .center)
-            .background(RoundedCorners(topLeft: 12.0, topRight: 12.0,
-                                       bottomLeft: 12.0, bottomRight: 12.0)
-                .fill(ColorConstants.Gray901))
-            .padding(.top, getRelativeHeight(8.0))
-            .padding(.horizontal, getRelativeWidth(16.0))
+            .background(ColorConstants.Gray901)
+            .cornerRadius(12)
+            .padding([.top, .horizontal])
+            //MARK: SEPARATLY CHART (But scroll laging)
+//            VStack {
+//                Chart(viewModel.data) { candle in
+//                        RectangleMark(x: .value("Day", candle.time),
+//                                      yStart: .value("Low price", candle.lowF),
+//                                      yEnd: .value("High price", candle.highF),
+//                                      width: 4)
+//                        .opacity(0.8)
+//                        .foregroundStyle(getColor(openF: candle.openF, closeF: candle.closeF))
+//                        
+//                        RectangleMark(x: .value("Day", candle.time),
+//                                      yStart: .value("Open price", candle.openF),
+//                                      yEnd: .value("Close price", candle.closeF),
+//                                      width: 48)
+//                        .foregroundStyle(getColor(openF: candle.openF, closeF: candle.closeF))
+//                        .annotation {
+//                            Text(String(format: "%.2f", candle.highF))
+//                                .font(.caption2)
+//                                .foregroundStyle(ColorConstants.Gray100)
+//                        }
+//                }
+//                .frame(height: 280)
+//                .frame(width: 360)
+//                .chartScrollableAxes([.horizontal])
+//                .chartXScale(range: self.getRange(), type: .log)
+//                .chartScrollPosition(x: $scrollPosition)
+//                .chartXAxis {
+//                    AxisMarks(values: .stride(by: .day)) { _ in
+//                        AxisValueLabel(format: .dateTime.month(.abbreviated).year())
+//                    }
+//                }
+//            }
+//            .frame(width: getRelativeWidth(361.0),
+//                   height: getRelativeHeight(313.0), alignment: .center)
+//            .background(RoundedCorners(topLeft: 12.0, topRight: 12.0,
+//                                       bottomLeft: 12.0, bottomRight: 12.0)
+//                .fill(ColorConstants.Gray901))
+//            .padding(.top, getRelativeHeight(10.0))
+//            .padding(.horizontal, getRelativeWidth(16.0))
+//            HStack {
+//                Chart(viewModel.data) { candle in
+//                        BarMark(x: .value("Day", candle.time),
+//                                y: .value("Population", candle.volume), width: 48)
+//                        .foregroundStyle(getColor(openF: candle.openF, closeF: candle.closeF))
+//                        .annotation {
+//                            Text(String(format: "%.2f", candle.volume))
+//                                .font(.caption2)
+//                            .foregroundStyle(ColorConstants.Gray100)
+//                        }
+//                }
+//                .padding()
+//                .frame(height: 120)
+//                .frame(width: 390)
+//                .chartScrollableAxes([.horizontal])
+//                .chartXScale(range: self.getRange(), type: .log)
+//                .chartScrollPosition(x: $scrollPosition)
+//
+//                .chartXAxis {
+//                    AxisMarks(values: .stride(by: .day)) { _ in
+//                        AxisValueLabel(format: .dateTime.month(.abbreviated).year())
+//                    }
+//                }
+//            }
+//            .frame(width: getRelativeWidth(361.0),
+//                   height: getRelativeHeight(116.0), alignment: .center)
+//            .background(RoundedCorners(topLeft: 12.0, topRight: 12.0,
+//                                       bottomLeft: 12.0, bottomRight: 12.0)
+//                .fill(ColorConstants.Gray901))
+//            .padding(.top, getRelativeHeight(8.0))
+//            .padding(.horizontal, getRelativeWidth(16.0))
         }
         .background(ColorConstants.Gray900)
         .onAppear {
